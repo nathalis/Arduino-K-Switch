@@ -214,7 +214,7 @@ void loop() {
     //*****************************************************************************
     //* NUMBERS on Numpad & Keypad
     //*****************************************************************************
-    if (VALUE1 == 0x00 || VALUE1 == 0x10) { //DEFAULT + CAPSLOCK
+    if (VALUE1 == 0x00 || VALUE1 == 0x10 || VALUE1 == 0x40 || VALUE1 == 0x50) { //DEFAULT + CAPSLOCK
 
       if (VALUE2 >= 0x20 && VALUE2 <= 0x29) { //numpad nums
         Keyboard.press(VALUE2 + 0x10);
