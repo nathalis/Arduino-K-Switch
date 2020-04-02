@@ -390,7 +390,7 @@ void loop() {
     //** KEYBOARD CHARS
     //*****************************************************************************
 
-    if (VALUE1 == 0x40 /*|| VALUE1 == 0x50*/ ) { //shift + SPECIAL CHARS
+    if (VALUE1 == 0x40 || VALUE1 == 0x50 ) { //shift + SPECIAL CHARS
       if (VALUE2 == 0x31) { //
         Keyboard.press('!');
       }
