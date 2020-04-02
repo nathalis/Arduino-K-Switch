@@ -14,6 +14,9 @@
 #define DATAPIN 3
 #define IRQPIN  2
 
+#define VOLTAGEPIN 8
+
+
 uint16_t c;
 uint8_t breaks = 0;
 uint8_t repeats = 0;
@@ -34,11 +37,27 @@ void setup( )
 
   keySerial_1.begin(38400);
   keySerial_2.begin(38400);
-  
+
+  delay(100);
+  pinMode(VOLTAGEPIN, OUTPUT);
+  delay(100);
+  digitalWrite(VOLTAGEPIN, LOW);
+  delay(100);  
+  digitalWrite(VOLTAGEPIN, HIGH);
+  delay(100);
+
   // Configure the keyboard library
   keyboard.begin( DATAPIN, IRQPIN );
+
+  delay(100);
+  digitalWrite(VOLTAGEPIN, LOW);
+  delay(100);  
+  digitalWrite(VOLTAGEPIN, HIGH);
+
+  delay(100);
   keyboard.echo( );              // ping keyboard to see if there
-  delay( 6 );
+  delay(100);
+/*  delay( 6 );
   c = keyboard.read( );
   if ( (c & 0xFF) == PS2_KEY_ECHO
        || (c & 0xFF) == PS2_KEY_BAT )
@@ -49,7 +68,7 @@ void setup( )
   {
     Serial.print( "Invalid Code received of " );
     Serial.println( c, HEX );
-  }
+  }*/
 }
 
 //*****************************************************************************
