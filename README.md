@@ -10,7 +10,7 @@ All SoftwareSerials has baud rate: 38400
 
 Connection Schematics:
 
-![Image description](https://github.com/nathalis/Arduino-KVM-Switch/blob/master/KVM_SCHEMATICS.png?raw=true)
+![Image description](https://github.com/nathalis/Arduino-KVM-Switch/blob/master/KVM_SCHEMATICS-updated.png?raw=true)
 
 Prototype photo:
 
