@@ -146,6 +146,43 @@ void loop() {
       Keyboard.press(KEY_RIGHT_ALT);
     }
     //*****************************************************************************
+
+    if ((VALUE1 == 0x29 || VALUE1 == 0x39) && VALUE2 == 0x0A) {
+      Keyboard.press(KEY_LEFT_ALT);
+      Keyboard.press(KEY_LEFT_CTRL);
+    }
+    if ((VALUE1 == 0x25 || VALUE1 == 0x35) && VALUE2 == 0x0B) {
+      Keyboard.press(KEY_RIGHT_ALT);
+      Keyboard.press(KEY_RIGHT_CTRL);
+    }
+
+    if ((VALUE1 == 0x49 || VALUE1 == 0x59) && VALUE2 == 0x06) {
+      Keyboard.press(KEY_LEFT_ALT);
+      Keyboard.press(KEY_LEFT_SHIFT);
+    }
+    if ((VALUE1 == 0x45 || VALUE1 == 0x55) && VALUE2 == 0x07) {
+      Keyboard.press(KEY_RIGHT_ALT);
+      Keyboard.press(KEY_RIGHT_SHIFT);
+    }
+    
+    if ((VALUE1 == 0x61 || VALUE1 == 0X71) && VALUE2 == 0x06) {
+      Keyboard.press(KEY_LEFT_SHIFT);
+      Keyboard.press(KEY_LEFT_CTRL);
+    }
+
+    
+    if ((VALUE1 == 0x69 || VALUE1 == 0x79) && VALUE2 == 0x06) {
+      Keyboard.press(KEY_LEFT_ALT);
+      Keyboard.press(KEY_LEFT_CTRL);
+      Keyboard.press(KEY_LEFT_SHIFT);
+    }
+    if ((VALUE1 == 0x65 || VALUE1 == 0x75) && VALUE2 == 0x07) {
+      Keyboard.press(KEY_RIGHT_ALT);
+      Keyboard.press(KEY_RIGHT_CTRL);
+      Keyboard.press(KEY_RIGHT_SHIFT);
+    }
+    
+    //*****************************************************************************
     //* A..Z combinations with SHIFT,ALT,CTRL
     //*****************************************************************************
     if (VALUE1 == 0x00 ) {  //a..z
@@ -841,6 +878,14 @@ void loop() {
 
     }
 
+    if ((VALUE2 == 0x1E && VALUE1 == 0x09) || (VALUE2 == 0x1E && VALUE1 == 0x05))  { //ALT + ENTER
+      Keyboard.press(KEY_RIGHT_ALT);
+      Keyboard.press(KEY_RETURN);
+    }
+    if ((VALUE2 == 0x1F && VALUE1 == 0x09) || (VALUE2 == 0x1F && VALUE1 == 0x05))  { //ALT + SPACEBAR
+      Keyboard.press(KEY_RIGHT_ALT);
+      Keyboard.press(' ');
+    }
 
     //*****************************************************************************
     //** FUNCTION KEYS CTRL,ALT,SHIFT + F1..F12 combinations
