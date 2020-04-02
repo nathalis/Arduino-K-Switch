@@ -6,7 +6,7 @@ Arduino UNO sends data from a connected USB keyboard via SoftwareSerial to 2 Ard
 
 Keyboard is toggled with ScrollLock Key.
 I recommend USB cable keyboard.
-All SoftwareSerials has baud rate: 38400
+All SoftwareSerials has baud rate: 38400 (increased to 115200)
 
 Connection Schematics:
 
