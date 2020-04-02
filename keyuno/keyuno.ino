@@ -32,11 +32,11 @@ byte KVM=1;
 //*****************************************************************************
 void setup( )
 {
-  Serial.begin( 38400 );
+  Serial.begin( 115200 );
   Serial.println( "PS2 Advanced Key by Nathalis" );
 
-  keySerial_1.begin(38400);
-  keySerial_2.begin(38400);
+  keySerial_1.begin(115200);
+  keySerial_2.begin(115200);
 
   delay(100);
   pinMode(VOLTAGEPIN, OUTPUT);

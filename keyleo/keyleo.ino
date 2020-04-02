@@ -31,8 +31,8 @@ void loadKEYs() {
 
 void setup() {
   // open the serial port:
-  Serial.begin(38400); //for console
-  Serial1.begin(38400); //for input
+  Serial.begin(115200); //for console
+  Serial1.begin(115200); //for input
   // initialize control over the keyboard:
   Keyboard.begin();
 }
@@ -194,6 +194,7 @@ void loop() {
     //*****************************************************************************
     //*  CTRL, SHITFT, ALT
     //*****************************************************************************
+
 
     if ((VALUE1 == 0x51 || VALUE1 == 0X41) && VALUE2 == 0x06) {
       Keyboard.press(KEY_LEFT_SHIFT);
