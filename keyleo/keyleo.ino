@@ -100,25 +100,93 @@ void loop() {
       } else if (VALUE2 == 0x18) { //keypad DOWN
         Keyboard.release(KEY_DOWN_ARROW);
         //------------------------
-        if (VALUE2 == 0x11) { //keypad HOME
+      } else if (VALUE2 == 0x11) { //keypad HOME
           Keyboard.release(KEY_HOME);
-        }
-        if (VALUE2 == 0x12) { //keypad END
+        } else if (VALUE2 == 0x12) { //keypad END
           Keyboard.release(KEY_END);
-        }
+        } else
         if (VALUE2 == 0x13) { //keypad PAGE UP
           Keyboard.release(KEY_PAGE_UP);
-        }
+        } else
         if (VALUE2 == 0x14) { //keypad PAGE DOWN
           Keyboard.release(KEY_PAGE_DOWN);
-        }
+        } else
         if (VALUE2 == 0x19) { //keypad INSERT
           Keyboard.release(KEY_INSERT);
-        }
+        } else
         if (VALUE2 == 0x1A) { //keypad DELETE
           Keyboard.release(KEY_DELETE);
-        }
+    /*    } else
         //------------------------
+      if (VALUE2 == 0x31) { //
+        Keyboard.release('!');
+      } else
+      if (VALUE2 == 0x32) { //
+        Keyboard.release('@');
+      } else
+      if (VALUE2 == 0x33) { //
+        Keyboard.release('#');
+      } else
+      if (VALUE2 == 0x34) { //
+        Keyboard.release('$');
+      } else
+      if (VALUE2 == 0x35) { //
+        Keyboard.release('%');
+      } else
+      if (VALUE2 == 0x36) { //
+        Keyboard.release('^');
+      } else
+      if (VALUE2 == 0x37) { //
+        Keyboard.release('&');
+      } else
+      if (VALUE2 == 0x38) { //
+        Keyboard.release('*');
+      } else
+      if (VALUE2 == 0x39) { //
+        Keyboard.release('(');
+      } else
+      if (VALUE2 == 0x30) { //
+        Keyboard.release(')');
+      } else
+
+      //------------------------
+      if (VALUE2 == 0x40) { //
+        Keyboard.release('~');
+      } else
+      if (VALUE2 == 0x3C) { //
+        Keyboard.release('_');
+      } else
+      if (VALUE2 == 0x5F) { //
+        Keyboard.release('+');
+      } else
+      if (VALUE2 == 0x5D) { //
+        Keyboard.release('{');
+      } else
+      if (VALUE2 == 0x5E) { //
+        Keyboard.release('}');
+      } else
+      if (VALUE2 == 0x5B) { //
+        Keyboard.release(':');
+      } else
+      if (VALUE2 == 0x3A) { //
+        Keyboard.release('"');
+      } else
+      if (VALUE2 == 0x5C) { //
+        Keyboard.release('|');
+      } else
+      if (VALUE2 == 0x3B) { //
+        Keyboard.release('<');
+      } else
+      if (VALUE2 == 0x3D) { //
+        Keyboard.release('>');
+      } else
+      if (VALUE2 == 0x3E) { //
+        Keyboard.release('?');
+      } else
+      if (VALUE2 == 0x2F) { //
+        Keyboard.release('/');
+*/
+        
       } else { //Anything ELSE
         Keyboard.releaseAll();
       }
@@ -251,7 +319,7 @@ void loop() {
     //*****************************************************************************
     //* NUMBERS on Numpad & Keypad
     //*****************************************************************************
-    if (VALUE1 == 0x00 || VALUE1 == 0x10 || VALUE1 == 0x40 || VALUE1 == 0x50) { //DEFAULT + CAPSLOCK
+    if (VALUE1 == 0x00 || VALUE1 == 0x10 /*|| VALUE1 == 0x40 || VALUE1 == 0x50*/) { //DEFAULT + CAPSLOCK
 
       if (VALUE2 >= 0x20 && VALUE2 <= 0x29) { //numpad nums
         Keyboard.press(VALUE2 + 0x10);
