@@ -913,6 +913,31 @@ void loop() {
     if (VALUE1 == 0X11 && VALUE2 == 0x1E) { //keypad enter
       Keyboard.press(KEY_RETURN);
     }
+    if ((VALUE1 == 0X21 || VALUE1 == 0X31) && VALUE2 == 0x1E) { //CTRL + keypad enter
+      Keyboard.press(KEY_RIGHT_CTRL);
+      Keyboard.press(KEY_RETURN);
+    }
+    if ((VALUE1 == 0X25 || VALUE1 == 0X35 || VALUE1 == 0X29 || VALUE1 == 0X39) && VALUE2 == 0x1E) { //alt + CTRL + keypad enter
+      Keyboard.press(KEY_RIGHT_CTRL);
+      Keyboard.press(KEY_RIGHT_ALT);
+      Keyboard.press(KEY_RETURN);
+    }
+    if ((VALUE1 == 0X45 || VALUE1 == 0X55 || VALUE1 == 0X49 || VALUE1 == 0X59) && VALUE2 == 0x1E) { //alt + shift + keypad enter
+      Keyboard.press(KEY_RIGHT_SHIFT);
+      Keyboard.press(KEY_RIGHT_ALT);
+      Keyboard.press(KEY_RETURN);
+    }
+    if ((VALUE1 == 0X61 || VALUE1 == 0X71) && VALUE2 == 0x1E) { //CTRL + shift + keypad enter
+      Keyboard.press(KEY_RIGHT_CTRL);
+      Keyboard.press(KEY_RIGHT_SHIFT);
+      Keyboard.press(KEY_RETURN);
+    }
+    if ((VALUE1 == 0X65 || VALUE1 == 0X75 || VALUE1 == 0X69 || VALUE1 == 0X79) && VALUE2 == 0x1E) { //alt + shift + ctrl + keypad enter
+      Keyboard.press(KEY_RIGHT_SHIFT);
+      Keyboard.press(KEY_RIGHT_ALT);
+      Keyboard.press(KEY_RETURN);
+    }
+    
     if (VALUE1 == 0x01 && VALUE2 == 0x1F) { //spacebar
       Keyboard.press(' ');
     }
@@ -1107,6 +1132,12 @@ void loop() {
       Keyboard.press(KEY_LEFT_SHIFT);
     }
 
+    if (VALUE2 == 0x04 && VALUE1 == 0x01)  { //print screen
+      Keyboard.press(KEY_PRNT_SCRN);
+    }
+    if (VALUE2 == 0x06 && VALUE1 == 0x00)  { //pause break
+      Keyboard.press(KEY_PAUSE);
+    }
 
   }
   //*****************************************************************************
