@@ -16,7 +16,9 @@ Prototype photo:
 
 ![Image description](https://raw.githubusercontent.com/nathalis/Arduino-KVM-Switch/master/Keyboard-prototype.jpg)
 
-> to do mouse/joypad/video switch support...
+> to do mouse/joypad/video switch support... 
+
+USB version has been released: https://github.com/nathalis/Arduino-USB-KM-Swtich
 
 by Nathalis.
 
