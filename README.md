@@ -1,4 +1,4 @@
-# Arduino-(KVM)-Switch
+# Arduino-(K)-Switch
 
 This is a fully functional keyboard switch (KVM but while only the keyboard),
 based on the combination of Arduino UNO + Arduino LEONARDO pro Micro.
