@@ -4,6 +4,8 @@ This is a fully functional keyboard switch (KVM but while only the keyboard),
 based on the combination of Arduino UNO + Arduino LEONARDO pro Micro.
 Arduino UNO sends data from a connected USB keyboard via SoftwareSerial to 2 Arduino LEONARDOs that emulate the keyboard.
 
+## This project is closed and is repleaced by newer https://github.com/nathalis/Arduino-USB-KM-Switch-2.0
+
 Keyboard is toggled with ScrollLock Key.
 I recommend USB cable keyboard.
 All SoftwareSerials has baud rate: 38400 (increased to 115200)
